@@ -4,17 +4,18 @@
         <attribute name="name" value=""/>
         <attribute name="authors" value="PhotonUser"/>
         <attribute name="about" value=""/>
-        <attribute name="saved" value="2024-02-23 11:43:34 AM"/>
-        <attribute name="created" value="UGhvdG9uVXNlcjtFQzJBTUFaLVRQOEw1MEY7MjAyNC0wMi0yMzsxMToxMzo0NCBBTTszMzAw"/>
-        <attribute name="edited" value="UGhvdG9uVXNlcjtFQzJBTUFaLVRQOEw1MEY7MjAyNC0wMi0yMzsxMTo0MzozNCBBTTs1OzM0MTQ="/>
+        <attribute name="saved" value="2024-02-24 05:35:49 PM"/>
+        <attribute name="created" value="UGhvdG9uVXNlcjtFQzJBTUFaLURLN0k5VUo7MjAyNC0wMi0yNDswNTowNToxOSBQTTszMzQy"/>
+        <attribute name="edited" value="UGhvdG9uVXNlcjtFQzJBTUFaLURLN0k5VUo7MjAyNC0wMi0yNDswNTozNTo0OSBQTTsxOzM0NTY="/>
     </attributes>
     <function name="Main" type="None" variable="">
         <parameters/>
         <body>
-            <declare name="payrate, hours" type="Real" array="False" size=""/>
-            <input variable="hours"/>
-            <input variable="payrate"/>
-            <output expression="payrate*hours" newline="False"/>
+            <declare name="qty, uprice, extprice" type="Real" array="False" size=""/>
+            <input variable="qty"/>
+            <input variable="uprice"/>
+            <assign variable="extprice" expression="qty*uprice"/>
+            <output expression="extprice" newline="False"/>
         </body>
     </function>
 </flowgorithm>

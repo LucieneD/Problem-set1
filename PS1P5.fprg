@@ -1,0 +1,23 @@
+<?xml version="1.0"?>
+<flowgorithm fileversion="2.11">
+    <attributes>
+        <attribute name="name" value=""/>
+        <attribute name="authors" value="PhotonUser"/>
+        <attribute name="about" value=""/>
+        <attribute name="saved" value="2024-02-26 02:46:07 PM"/>
+        <attribute name="created" value="UGhvdG9uVXNlcjtFQzJBTUFaLTAzSlIzTzk7MjAyNC0wMi0yNjswMjozOToxMiBQTTszMjk2"/>
+        <attribute name="edited" value="UGhvdG9uVXNlcjtFQzJBTUFaLTAzSlIzTzk7MjAyNC0wMi0yNjswMjo0NjowNyBQTTsxOzM0MDY="/>
+    </attributes>
+    <function name="Main" type="None" variable="">
+        <parameters/>
+        <body>
+            <declare name="price, discount, discountamt, discountprice" type="Real" array="False" size=""/>
+            <input variable="price"/>
+            <input variable="discount"/>
+            <assign variable="discountamt" expression="discount*100"/>
+            <assign variable="discountprice" expression="discountamt-price"/>
+            <output expression="&quot;hello, your final cost after discount is&quot;" newline="True"/>
+            <output expression="discountprice" newline="True"/>
+        </body>
+    </function>
+</flowgorithm>
