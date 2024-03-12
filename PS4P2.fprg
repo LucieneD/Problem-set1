@@ -1,0 +1,22 @@
+<?xml version="1.0"?>
+<flowgorithm fileversion="2.11">
+    <attributes>
+        <attribute name="name" value=""/>
+        <attribute name="authors" value="PhotonUser"/>
+        <attribute name="about" value=""/>
+        <attribute name="saved" value="2024-03-11 02:17:25 PM"/>
+        <attribute name="created" value="UGhvdG9uVXNlcjtFQzJBTUFaLVJPRjc1UDI7MjAyNC0wMy0xMTswMjoxMzo1NSBQTTszMzE3"/>
+        <attribute name="edited" value="UGhvdG9uVXNlcjtFQzJBTUFaLVJPRjc1UDI7MjAyNC0wMy0xMTswMjoxNzoyNSBQTTsxOzM0MjY="/>
+    </attributes>
+    <function name="Main" type="None" variable="">
+        <parameters/>
+        <body>
+            <declare name="pprice, sprice, qty, value" type="Real" array="False" size=""/>
+            <input variable="pprice"/>
+            <input variable="sprice"/>
+            <input variable="qty"/>
+            <assign variable="value" expression="(sprice-pprice)*qty"/>
+            <output expression="&quot;The current value of your stock is&quot; &amp;value" newline="True"/>
+        </body>
+    </function>
+</flowgorithm>

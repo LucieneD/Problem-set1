@@ -1,0 +1,29 @@
+<?xml version="1.0"?>
+<flowgorithm fileversion="2.11">
+    <attributes>
+        <attribute name="name" value=""/>
+        <attribute name="authors" value="PhotonUser"/>
+        <attribute name="about" value=""/>
+        <attribute name="saved" value="2024-03-06 08:37:25 PM"/>
+        <attribute name="created" value="UGhvdG9uVXNlcjtFQzJBTUFaLTNSVVZTSEE7MjAyNC0wMy0wNjswODoxMjoxMSBQTTszMzcz"/>
+        <attribute name="edited" value="UGhvdG9uVXNlcjtFQzJBTUFaLTNSVVZTSEE7MjAyNC0wMy0wNjswODozNzoyNSBQTTsxOzM0OTM="/>
+    </attributes>
+    <function name="Main" type="None" variable="">
+        <parameters/>
+        <body>
+            <declare name="meal, tip15, tip18, tip20, meal15, meal18, meal20, total" type="Real" array="False" size=""/>
+            <declare name="total, mealr20, mealr15, mealr18, tipr20, tipr18, tipr20" type="String" array="False" size=""/>
+            <input variable="meal"/>
+            <assign variable="tip15" expression="meal*0.15"/>
+            <assign variable="tip18" expression="meal*0.18"/>
+            <assign variable="tip20" expression="meal*0.20"/>
+            <assign variable="mealr15" expression="meal+tip15"/>
+            <assign variable="mealr18" expression="meal+tip18"/>
+            <assign variable="mealr20" expression="meal+tip20"/>
+            <assign variable="total" expression="meal"/>
+            <output expression="&quot;If you would like to tip 15%&quot;&#13;&#10;&quot;Total&quot; &amp;mealr15&#13;&#10;&quot;Tip:&quot; &amp;tipr15&#13;&#10;&quot;Total+Tip:&quot; &amp;mealr15" newline="True"/>
+            <output expression="&quot;If you would like to tip 18%&quot;&#13;&#10;&quot;Total:&quot; &amp;meal&#13;&#10;&quot;Tip:&quot; &amp;tip18&#13;&#10;&quot;Total+Tip:&quot; &amp;meal18" newline="True"/>
+            <output expression="&quot;If you would like to tip 20%&quot;&#13;&#10;&quot;Total:&quot; &amp;meal&#13;&#10;&quot;Tip:&quot; &amp;tip20&#13;&#10;&quot;Total+Tip:&quot; &amp;meal20" newline="True"/>
+        </body>
+    </function>
+</flowgorithm>

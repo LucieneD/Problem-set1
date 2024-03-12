@@ -1,0 +1,21 @@
+<?xml version="1.0"?>
+<flowgorithm fileversion="2.11">
+    <attributes>
+        <attribute name="name" value=""/>
+        <attribute name="authors" value="PhotonUser"/>
+        <attribute name="about" value=""/>
+        <attribute name="saved" value="2024-03-11 02:13:51 PM"/>
+        <attribute name="created" value="UGhvdG9uVXNlcjtFQzJBTUFaLVJPRjc1UDI7MjAyNC0wMy0xMTswMjoxMToyNyBQTTszMzE0"/>
+        <attribute name="edited" value="UGhvdG9uVXNlcjtFQzJBTUFaLVJPRjc1UDI7MjAyNC0wMy0xMTswMjoxMzo1MSBQTTsxOzM0MjE="/>
+    </attributes>
+    <function name="Main" type="None" variable="">
+        <parameters/>
+        <body>
+            <declare name="exam1, exam2, final" type="Integer" array="False" size=""/>
+            <input variable="exam1"/>
+            <input variable="exam2"/>
+            <assign variable="final" expression="(exam1*0.60)+(exam2*0.40)"/>
+            <output expression="&quot;Hello, your final exam score is&quot; &amp;final" newline="True"/>
+        </body>
+    </function>
+</flowgorithm>
