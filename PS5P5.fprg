@@ -1,0 +1,43 @@
+<?xml version="1.0"?>
+<flowgorithm fileversion="2.11">
+    <attributes>
+        <attribute name="name" value=""/>
+        <attribute name="authors" value="PhotonUser"/>
+        <attribute name="about" value=""/>
+        <attribute name="saved" value="2024-03-18 06:55:05 PM"/>
+        <attribute name="created" value="UGhvdG9uVXNlcjtFQzJBTUFaLTNEMUVISVY7MjAyNC0wMy0xODswNDo1OTo0MSBQTTszMzMw"/>
+        <attribute name="edited" value="UGhvdG9uVXNlcjtFQzJBTUFaLTNEMUVISVY7MjAyNC0wMy0xODswNjo1NTowNSBQTTsyOzM0Mzc="/>
+    </attributes>
+    <function name="Main" type="None" variable="">
+        <parameters/>
+        <body>
+            <declare name="lastname" type="String" array="False" size=""/>
+            <declare name="depen" type="Integer" array="False" size=""/>
+            <declare name="gross, adjgross, tax, incomet" type="Real" array="False" size=""/>
+            <output expression="&quot;Enter your last name&quot;" newline="True"/>
+            <input variable="lastname"/>
+            <output expression="&quot;Enter your number of dependents&quot;" newline="True"/>
+            <input variable="depen"/>
+            <output expression="&quot;enter your gross income&quot;" newline="True"/>
+            <input variable="gross"/>
+            <assign variable="adjgross" expression="(gross-depen)*12000"/>
+            <if expression="adjgross&gt;=50000">
+                <then>
+                    <assign variable="tax" expression="0.20"/>
+                </then>
+                <else>
+                    <assign variable="tax" expression="0.10"/>
+                </else>
+            </if>
+            <assign variable="incomet" expression="adjgross*tax"/>
+            <if expression="incomet&lt;0.00">
+                <then>
+                    <assign variable="incomet" expression="100.00"/>
+                </then>
+                <else>
+                    <assign variable="incomet" expression="incomet"/>
+                </else>
+            </if>
+        </body>
+    </function>
+</flowgorithm>
