@@ -1,0 +1,33 @@
+<?xml version="1.0"?>
+<flowgorithm fileversion="2.11">
+    <attributes>
+        <attribute name="name" value=""/>
+        <attribute name="authors" value="PhotonUser"/>
+        <attribute name="about" value=""/>
+        <attribute name="saved" value="2024-03-18 04:04:49 PM"/>
+        <attribute name="created" value="UGhvdG9uVXNlcjtFQzJBTUFaLVRKUzhNQUk7MjAyNC0wMy0xODswOToyODowNSBBTTszMzYw"/>
+        <attribute name="edited" value="UGhvdG9uVXNlcjtFQzJBTUFaLVRKUzhNQUk7MjAyNC0wMy0xODswOToyOTozMiBBTTsxOzM0Njk="/>
+        <attribute name="edited" value="UGhvdG9uVXNlcjtFQzJBTUFaLTNEMUVISVY7MjAyNC0wMy0xODswNDowNDo0OSBQTTsxOzM0MzY="/>
+    </attributes>
+    <function name="Main" type="None" variable="">
+        <parameters/>
+        <body>
+            <declare name="item, A, B" type="String" array="False" size=""/>
+            <declare name="qty, uprice, extprice" type="Real" array="False" size=""/>
+            <input variable="item"/>
+            <input variable="qty"/>
+            <if expression="item = A">
+                <then>
+                    <assign variable="uprice" expression="10.00"/>
+                </then>
+                <else>
+                    <assign variable="uprice" expression="20.00"/>
+                </else>
+            </if>
+            <assign variable="extprice" expression="uprice*qty"/>
+            <output expression="&quot;Your item&quot; &amp;item" newline="True"/>
+            <output expression="&quot;Unit price is $ &quot; &amp;uprice" newline="True"/>
+            <output expression="&quot;Extended price is $ &quot; &amp;extprice" newline="True"/>
+        </body>
+    </function>
+</flowgorithm>
