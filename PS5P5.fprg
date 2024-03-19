@@ -4,9 +4,10 @@
         <attribute name="name" value=""/>
         <attribute name="authors" value="PhotonUser"/>
         <attribute name="about" value=""/>
-        <attribute name="saved" value="2024-03-18 06:55:05 PM"/>
+        <attribute name="saved" value="2024-03-19 12:50:50 PM"/>
         <attribute name="created" value="UGhvdG9uVXNlcjtFQzJBTUFaLTNEMUVISVY7MjAyNC0wMy0xODswNDo1OTo0MSBQTTszMzMw"/>
         <attribute name="edited" value="UGhvdG9uVXNlcjtFQzJBTUFaLTNEMUVISVY7MjAyNC0wMy0xODswNjo1NTowNSBQTTsyOzM0Mzc="/>
+        <attribute name="edited" value="UGhvdG9uVXNlcjtFQzJBTUFaLTBOODBTTDQ7MjAyNC0wMy0xOTsxMjo1MDo1MCBQTTsyOzM0MDM="/>
     </attributes>
     <function name="Main" type="None" variable="">
         <parameters/>
@@ -20,7 +21,7 @@
             <input variable="depen"/>
             <output expression="&quot;enter your gross income&quot;" newline="True"/>
             <input variable="gross"/>
-            <assign variable="adjgross" expression="(gross-depen)*12000"/>
+            <assign variable="adjgross" expression="gross-depen*(12000)"/>
             <if expression="adjgross&gt;=50000">
                 <then>
                     <assign variable="tax" expression="0.20"/>
@@ -38,6 +39,11 @@
                     <assign variable="incomet" expression="incomet"/>
                 </else>
             </if>
+            <output expression="&quot;Hello&quot; &amp;lastname" newline="True"/>
+            <output expression="&quot;Your gross income is &quot; &amp;gross" newline="True"/>
+            <output expression="&quot;Number of dependent are &quot; &amp;depen" newline="True"/>
+            <output expression="&quot;Your AGI is &quot; &amp;adjgross" newline="True"/>
+            <output expression="&quot;You will be receiving $&quot; &amp;incomet" newline="True"/>
         </body>
     </function>
 </flowgorithm>
