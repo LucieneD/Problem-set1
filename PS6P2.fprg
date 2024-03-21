@@ -1,0 +1,46 @@
+<?xml version="1.0"?>
+<flowgorithm fileversion="2.11">
+    <attributes>
+        <attribute name="name" value=""/>
+        <attribute name="authors" value="PhotonUser"/>
+        <attribute name="about" value=""/>
+        <attribute name="saved" value="2024-03-20 07:39:57 PM"/>
+        <attribute name="created" value="UGhvdG9uVXNlcjtFQzJBTUFaLUlGQ0RPQko7MjAyNC0wMy0yMDswNzoyNzozMSBQTTszMzQ5"/>
+        <attribute name="edited" value="UGhvdG9uVXNlcjtFQzJBTUFaLUlGQ0RPQko7MjAyNC0wMy0yMDswNzozOTo1NyBQTTsxOzM0Njg="/>
+    </attributes>
+    <function name="Main" type="None" variable="">
+        <parameters/>
+        <body>
+            <declare name="part, qty" type="Integer" array="False" size=""/>
+            <declare name="cost, total" type="Real" array="False" size=""/>
+            <output expression="&quot;Enter a part number&quot;" newline="True"/>
+            <input variable="part"/>
+            <output expression="&quot;Enter quantity you would like to purchase&quot;" newline="True"/>
+            <input variable="qty"/>
+            <if expression="part=10 || part=55">
+                <then>
+                    <assign variable="cost" expression="1.00"/>
+                </then>
+                <else>
+                    <if expression="part=99">
+                        <then>
+                            <assign variable="cost" expression="2.00"/>
+                        </then>
+                        <else>
+                            <if expression="part=80 || part=70">
+                                <then>
+                                    <assign variable="cost" expression="3.00"/>
+                                </then>
+                                <else>
+                                    <assign variable="cost" expression="5.00"/>
+                                </else>
+                            </if>
+                        </else>
+                    </if>
+                </else>
+            </if>
+            <assign variable="total" expression="cost*qty"/>
+            <output expression="&quot;For part # &quot; &amp;part &amp; &quot;Cost per unit is $&quot; &amp; cost &amp; &quot;Total cost is $&quot; &amp; cost" newline="True"/>
+        </body>
+    </function>
+</flowgorithm>
