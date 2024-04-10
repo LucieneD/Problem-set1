@@ -1,0 +1,34 @@
+<?xml version="1.0"?>
+<flowgorithm fileversion="2.11">
+    <attributes>
+        <attribute name="name" value=""/>
+        <attribute name="authors" value="PhotonUser"/>
+        <attribute name="about" value=""/>
+        <attribute name="saved" value="2024-04-03 07:43:48 PM"/>
+        <attribute name="created" value="UGhvdG9uVXNlcjtFQzJBTUFaLTREUlBQVTU7MjAyNC0wNC0wMzswNzowMjo0MSBQTTszMzQ4"/>
+        <attribute name="edited" value="UGhvdG9uVXNlcjtFQzJBTUFaLTREUlBQVTU7MjAyNC0wNC0wMzswNzo0Mzo0OCBQTTsxOzM0Njg="/>
+    </attributes>
+    <function name="Main" type="None" variable="">
+        <parameters/>
+        <body>
+            <declare name="loopdecision, name, yes" type="String" array="False" size=""/>
+            <declare name="exam1, exam2, average, counter" type="Integer" array="False" size=""/>
+            <output expression="&quot;Do you want to loop? Yes or No??&quot;" newline="True"/>
+            <input variable="loopdecision"/>
+            <assign variable="counter" expression="0"/>
+            <while expression="loopdecision = &quot;yes&quot;">
+                <output expression="&quot;Enter student last name&quot;" newline="True"/>
+                <input variable="name"/>
+                <output expression="&quot;Enter students' exam score 1&quot;" newline="True"/>
+                <input variable="exam1"/>
+                <output expression="&quot;Enter student' exam 2 score&quot;" newline="True"/>
+                <input variable="exam2"/>
+                <assign variable="average" expression="(exam1+exam2)/2"/>
+                <assign variable="counter" expression="counter+1"/>
+                <output expression="&quot;Do you want to loop again? Yes or No?&quot;" newline="True"/>
+                <input variable="loopdecision"/>
+            </while>
+            <output expression="counter" newline="True"/>
+        </body>
+    </function>
+</flowgorithm>

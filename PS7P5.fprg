@@ -1,0 +1,45 @@
+<?xml version="1.0"?>
+<flowgorithm fileversion="2.11">
+    <attributes>
+        <attribute name="name" value=""/>
+        <attribute name="authors" value="PhotonUser"/>
+        <attribute name="about" value=""/>
+        <attribute name="saved" value="2024-04-10 01:46:52 PM"/>
+        <attribute name="created" value="UGhvdG9uVXNlcjtFQzJBTUFaLU5KMU9LTTk7MjAyNC0wNC0xMDswMToyNzo0NiBQTTszMzQx"/>
+        <attribute name="edited" value="UGhvdG9uVXNlcjtFQzJBTUFaLU5KMU9LTTk7MjAyNC0wNC0xMDswMTo0Njo1MiBQTTsxOzM0NDc="/>
+    </attributes>
+    <function name="Main" type="None" variable="">
+        <parameters/>
+        <body>
+            <declare name="response, yes" type="String" array="False" size=""/>
+            <declare name="price, extprice, disamt, dis, total, totaldisc" type="Real" array="False" size=""/>
+            <declare name="qty" type="Integer" array="False" size=""/>
+            <output expression="&quot;Do you want to continue? yes or no?&quot;" newline="True"/>
+            <input variable="response"/>
+            <assign variable="totaldisc" expression="0"/>
+            <while expression="response == &quot;yes&quot;">
+                <output expression="&quot;What is the price of the item?&quot;" newline="True"/>
+                <input variable="price"/>
+                <output expression="&quot;What is the quantity you wish to purchase?&quot;" newline="True"/>
+                <input variable="qty"/>
+                <assign variable="extprice" expression="price*qty"/>
+                <if expression="extprice &gt;= 10000">
+                    <then>
+                        <assign variable="dis" expression="0.25"/>
+                    </then>
+                    <else/>
+                </if>
+                <assign variable="dis" expression="0.10"/>
+                <assign variable="disamt" expression="extprice*dis"/>
+                <assign variable="total" expression="extprice-disamt"/>
+                <output expression="&quot;The extened price is $&quot; &amp;extprice" newline="True"/>
+                <output expression="&quot;The discount amount you will receive is $&quot; &amp;disamt" newline="True"/>
+                <output expression="&quot;The final price after discount is $ &quot; &amp;total" newline="True"/>
+                <output expression="&quot;Do you want to go again? yes or no?&quot;" newline="True"/>
+                <input variable="response"/>
+                <assign variable="totaldisc" expression="disamt+disamt"/>
+            </while>
+            <output expression="&quot;The sum of all discounts is&quot; &amp;totaldisc" newline="True"/>
+        </body>
+    </function>
+</flowgorithm>
